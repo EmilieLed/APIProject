@@ -13,8 +13,8 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-# host: petstore.swagger.io
-# basePath: /v2
+host: localhost3000
+basePath: /v2
 tags:
 - name: item
   description: Everything about your items
@@ -28,8 +28,8 @@ tags:
   externalDocs:
     description: Find out more about our store
     url: http://swagger.io
-# schemes:
-# - http
+schemes:
+ - http
 paths:
   /products:
     post:
