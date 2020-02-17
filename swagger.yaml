@@ -13,8 +13,8 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-host: localhost3000
-basePath: /v2
+# host: localhost3000
+# basePath: /v2
 tags:
 - name: item
   description: Everything about your items
@@ -28,9 +28,9 @@ tags:
   externalDocs:
     description: Find out more about our store
     url: http://swagger.io
-schemes:
- - http
- - https
+# schemes:
+#  - http
+#  - https
 paths:
   /products:
     post:
@@ -180,9 +180,9 @@ paths:
         405:
           description: Invalid input
       security:
-      - petstore_auth:
-        - write:pets
-        - read:pets
+      - productstore_auth:
+        - write:products
+        - read:products
     delete:
       tags:
       - user
@@ -387,13 +387,13 @@ paths:
         404:
           description: User not found
 securityDefinitions:
-  petstore_auth:
+  productstore_auth:
     type: oauth2
     authorizationUrl: http://petstore.swagger.io/oauth/dialog
     flow: implicit
     scopes:
-      write:pets: modify products in your account
-      read:pets: read your products
+      write:products: modify products in your account
+      read:products: read your products
   api_key:
     type: apiKey
     name: api_key
@@ -502,3 +502,9 @@ externalDocs:
 # - http
 # Added by API Auto Mocking Plugin
 #host: virtserver.swaggerhub.com
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /EmilieLed/SellPlatform/1.0.0
+schemes:
+ - https
+ - http
