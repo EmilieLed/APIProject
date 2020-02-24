@@ -1,2 +1,0 @@
-# APIProject
-A selling platform
